@@ -18,13 +18,13 @@ public class MovieInfoService {
 	@Autowired
 	RestTemplate restTemplate;
 	
-//	@HystrixCommand(fallbackMethod = "getFallBackGetMovie")
-//			,commandProperties = {
-//			@HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds", value = "10000"),
-//			@HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "5"),
-//			@HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "50"),
-//			@HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "5000")
-//			 })
+	@HystrixCommand(fallbackMethod = "getFallBackGetMovie"
+			,commandProperties = {
+			@HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds", value = "10000"),
+			@HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "5"),
+			@HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "50"),
+			@HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "5000")
+			 })
 	public CatalogOverview getMovie(MovieRating rating) {
 		Movie movie=restTemplate
 				.getForObject("http://MOVIE-INFO-SERVICE/ci/"+rating.getMovieID(), Movie.class);
