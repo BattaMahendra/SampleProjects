@@ -16,7 +16,7 @@ public class ServiceClass {
 	@Autowired
 	private Random random;
 	
-	List<MovieRating> movieRatingsList=new ArrayList<>();
+	public List<MovieRating> movieRatingsList=new ArrayList<>();
 	
 	public List<MovieRating> aList(){
 		if(movieRatingsList.size()>=0) {
