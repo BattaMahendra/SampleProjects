@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "chaos.monkey.assaults.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'chaos.monkey.assaults.enabled'"
+  },
+  {
+    "name": "chaos.monkey.assaults.types",
+    "type": "java.lang.String",
+    "description": "A description for 'chaos.monkey.assaults.types'"
+  }
+]}
