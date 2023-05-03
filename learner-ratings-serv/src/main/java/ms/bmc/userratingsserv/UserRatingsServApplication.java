@@ -12,9 +12,9 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableCircuitBreaker
-@EnableHystrix
-@EnableHystrixDashboard
+//@EnableCircuitBreaker
+//@EnableHystrix
+//@EnableHystrixDashboard
 public class UserRatingsServApplication {
 
 	public static void main(String[] args) {

@@ -38,7 +38,7 @@ public class Controller {
 	
 	@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping("/{userId}")
-//	@HystrixCommand(fallbackMethod ="getFallBackMethod" )
+	@HystrixCommand(fallbackMethod ="getFallBackMethod" )
 //	@HystrixCommand
 	public ResponseEntity<Optional<List<CatalogOverview>>> getCatalogOverview(@PathVariable("userId") int userId){
 		
@@ -72,9 +72,12 @@ public class Controller {
 	public String sayHello1() {
 		return "Hello";
 	}
-//	public List<CatalogOverview> getFallBackMethod(@PathVariable("empId") String empId){
-//		
-//	return Arrays.asList(new CatalogOverview("No movie", "There is no movie description", 0));
-//	}
+	public ResponseEntity<Optional<List<CatalogOverview>>> getFallBackMethod(@PathVariable("empId") int empId){
+		
+	return new
+			ResponseEntity<Optional<List<CatalogOverview>>> 
+					(Optional.ofNullable(Arrays.asList(new CatalogOverview("No movie", "There is no movie description", 0))) ,
+							HttpStatus.OK);
+	}
 
 }
