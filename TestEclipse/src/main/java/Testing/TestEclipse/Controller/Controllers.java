@@ -4,6 +4,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/*
+ * This project is a Resource server 
+ * we have implemented Okta Auth server in it.
+ * if we want to access this app's endpoints we need access token from Okta auth server.
+ */
 @RestController
 @RequestMapping("/m")
 public class Controllers {
