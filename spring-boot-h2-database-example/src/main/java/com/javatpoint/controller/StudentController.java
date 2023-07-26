@@ -74,9 +74,9 @@ public class StudentController
 		@GetMapping("/BL")
 		public List<BaseLocation> getAllBLList() throws RestClientException{
 			
-			BaseLocation[] BaseLocationArray=restTemplate
-					.getForObject("http://localhost:8123/BL/all", BaseLocation[].class);
-//			return studentService.getAllBLFromShipmentRT();
-			return  Arrays.asList(BaseLocationArray);
+//			BaseLocation[] BaseLocationArray=restTemplate
+//					.getForObject("http://localhost:8123/BL/all", BaseLocation[].class);
+			return studentService.getAllBLFromShipmentRT();
+//			return  Arrays.asList(BaseLocationArray);
 		}
 }

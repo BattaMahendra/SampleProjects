@@ -1,5 +1,6 @@
 package ms.bmc.userratingsserv.controllers;
 
+import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -11,6 +12,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -68,5 +71,24 @@ public class RatingController {
 	
 	}
 	
+	@PostMapping("/bi")
+	public SimpleTestForBI returnBigInteger(@RequestBody SimpleTestForBI b) {
+		return b;
+	}
 	
+	@HystrixCommand
+	@GetMapping("/big")
+	public SimpleTestForBI returnBigIntegerObj() {
+		SimpleTestForBI s=new SimpleTestForBI();
+		s.bi=new BigInteger("1234");
+		s.name="mahi";
+		return s;
+	}
+	
+	
+}
+
+class SimpleTestForBI{
+	public BigInteger bi;
+	public String name;
 }

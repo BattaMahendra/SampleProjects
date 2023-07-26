@@ -14,4 +14,9 @@ public class AdminserverApplication {
 		SpringApplication.run(AdminserverApplication.class, args);
 	}
 
+
+
 }
+//add a bean of rest template
+
+
