@@ -1,6 +1,8 @@
 package com.javatpoint.controller;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -72,11 +74,11 @@ public class StudentController
 		}
 		
 		@GetMapping("/BL")
-		public List<BaseLocation> getAllBLList() throws RestClientException{
+		public CompletableFuture<List<BaseLocation>> getAllBLList() throws RestClientException{
 			
 //			BaseLocation[] BaseLocationArray=restTemplate
 //					.getForObject("http://localhost:8123/BL/all", BaseLocation[].class);
 			return studentService.getAllBLFromShipmentRT();
-//			return  Arrays.asList(BaseLocationArray);
+			//return  Arrays.asList(BaseLocationArray);
 		}
 }
