@@ -11,5 +11,6 @@ public class EurekaServerGradleApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EurekaServerGradleApplication.class, args);
+		
 	}
 }

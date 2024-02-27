@@ -17,6 +17,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableHystrixDashboard
 public class MovieInfoServApplication {
 
+
 	public static void main(String[] args) {
 		SpringApplication.run(MovieInfoServApplication.class, args);
 	}

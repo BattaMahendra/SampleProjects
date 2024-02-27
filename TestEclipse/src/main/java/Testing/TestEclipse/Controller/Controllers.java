@@ -37,6 +37,8 @@ public class Controllers {
 	 *     take that access token without double colons and use it in our endpoint(localhost:8080/m/s)
 	 *     how to use is go to Authorisation in postman ---> Bearer token ---> add the token which u copied form okta authorisation server resopnse
 	 *     now you will be able to acccess this below endpoint.
+	 *     
+	 *     created token --> 00xv6voXn8sfvKY4UBeKQ5tt49N6_L9HwbyBOaOiJg
 	 */
 	@GetMapping("/s")
 	public String sayHello() {
