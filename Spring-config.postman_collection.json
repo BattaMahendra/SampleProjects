@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "1a664b11-b25a-42e8-a9e4-5bdce5949ed4",
+		"name": "Spring-config",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20158282",
+		"_collection_link": "https://restless-desert-177614.postman.co/workspace/Micro-Services~fe4908fd-7009-4148-b93f-3faa4c1692dc/collection/20158282-1a664b11-b25a-42e8-a9e4-5bdce5949ed4?action=share&creator=20158282&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/x",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"x"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5671/app/g",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5671",
+					"path": [
+						"app",
+						"g"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 7,\r\n        \"name\": \"Divya\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5671/app/a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5671",
+					"path": [
+						"app",
+						"a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"Vineela Gajarla\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5671/app/u",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5671",
+					"path": [
+						"app",
+						"u"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

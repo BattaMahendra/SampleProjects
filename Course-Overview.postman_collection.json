@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "b1f8378f-4ec9-4167-beba-afa47b4347b7",
+		"name": "Course-Overview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20158282",
+		"_collection_link": "https://restless-desert-177614.postman.co/workspace/Micro-Services~fe4908fd-7009-4148-b93f-3faa4c1692dc/collection/20158282-b1f8378f-4ec9-4167-beba-afa47b4347b7?action=share&creator=20158282&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "getCourseOverview",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/app/66",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"app",
+						"66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.themoviedb.org/3/movie/479?api_key=f2ad0baa3c5e806f6c9d8e35e1bfdd20",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.themoviedb.org/3/movie/479?api_key=f2ad0baa3c5e806f6c9d8e35e1bfdd20",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"movie",
+						"479"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "f2ad0baa3c5e806f6c9d8e35e1bfdd20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.themoviedb.org/3/movie/357?api_key=f2ad0baa3c5e806f6c9d8e35e1bfdd20",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.themoviedb.org/3/movie/357?api_key=f2ad0baa3c5e806f6c9d8e35e1bfdd20",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"movie",
+						"357"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "f2ad0baa3c5e806f6c9d8e35e1bfdd20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://randomuser.me/api/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://randomuser.me/api/",
+					"protocol": "https",
+					"host": [
+						"randomuser",
+						"me"
+					],
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:",
+					"host": [
+						"localhost"
+					],
+					"port": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

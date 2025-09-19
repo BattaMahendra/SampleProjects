@@ -1,0 +1,20 @@
+Changing Credentials
+
+3536212-operdataconfigservices -> left side search for credentials --> global credentials --> ctrl +F  relevant things you need to change --> update button
+
+After changing the credentials you need to deploy them into pcf 
+
+612 services --> DevOpsPipelines --> createUpdatePCFServices --> build with params --> select appropriate
+
+if there are only config file changes(without any code changes in the app) --> 212 services --> applications --> estaranalytics
+--> build with params --> select release ---> build ( while building pipeline, if you get the branch name select release --> on the left side at the start of build you can see no of commits and you can check them)
+
+Deploying the release version after changing creds(you  do it only when there real code changes not config changes)
+
+go to 212 services --> applications --> estaranalytics --> multi --> search for release and go into that and deploy
+
+
+** you can look at the variables names in github --> respective eai ---> devops ---> createUpdatePCFServices 
+
+** before restarting in volume , please use the vol url and at last add /actuator/info to url and know the version
+ 

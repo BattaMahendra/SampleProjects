@@ -10,14 +10,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
+import ms.bmc.movieinfoserv.entities.Emp;
 import ms.bmc.movieinfoserv.entities.Movie;
 import ms.bmc.movieinfoserv.entities.MovieSummary;
+import reactor.core.publisher.Mono;
 
 
 @RestController
@@ -43,6 +47,13 @@ public class MovieControllers {
 										(Optional.ofNullable(new Movie(courseId,movieSummery.getTitle(),movieSummery.getOverview())),
 												HttpStatus.OK);
 				
+	}
+	
+	@GetMapping("/test")
+	public ResponseEntity<String> testGet( Emp e,@RequestHeader(name ="Authorization") String auth){
+		
+		return ResponseEntity.ok(e.getName());
+		
 	}
 
 }

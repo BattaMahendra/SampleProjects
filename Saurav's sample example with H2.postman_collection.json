@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "9c0d4a07-1b81-42c2-a7e5-477e87ece34d",
+		"name": "Saurav's sample example with H2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20158282",
+		"_collection_link": "https://www.postman.com/restless-desert-177614/workspace/3c2d2afb-6c1b-4f8b-ac79-e34a3b05dfb6/collection/20158282-9c0d4a07-1b81-42c2-a7e5-477e87ece34d?action=share&creator=20158282&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "actuator",
+			"item": [
+				{
+					"name": "/chaosmonkey",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/actuator/chaosmonkey",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator",
+								"chaosmonkey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assaults",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/actuator/chaosmonkey/assaults",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator",
+								"chaosmonkey",
+								"assaults"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "chamge config",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"level\": 1,\r\n    \"deterministic\": true,\r\n    \"latencyRangeStart\": 20000,\r\n    \"latencyRangeEnd\": 20000,\r\n    \"latencyActive\": true,\r\n    \r\n    \"exceptionsActive\": false,\r\n    \"exception\": {\r\n        \"type\": \"java.lang.IllegalArgumentException\",\r\n        \"method\": \"<init>\",\r\n        \"arguments\": [\r\n            {\r\n                \"type\": \"java.lang.String\",\r\n                \"value\": \"Chaos Monkey - IllegalArgumentException\"\r\n            }\r\n        ]\r\n    },\r\n    \"killApplicationActive\": false,\r\n    \"memoryActive\": false,\r\n    \"memoryMillisecondsHoldFilledMemory\": 90000,\r\n    \"memoryMillisecondsWaitNextIncrease\": 1000,\r\n    \"memoryFillIncrementFraction\": 0.15,\r\n    \"memoryFillTargetFraction\": 0.25,\r\n    \"cpuActive\": false,\r\n    \"cpuMillisecondsHoldLoad\": 90000,\r\n    \"cpuLoadTargetFraction\": 0.9,\r\n    \"runtimeAssaultCronExpression\": \"OFF\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/actuator/chaosmonkey/assaults",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator",
+								"chaosmonkey",
+								"assaults"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "watchers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/actuator/chaosmonkey/watchers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator",
+								"chaosmonkey",
+								"watchers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "watchers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"controller\": false,\r\n  \"restController\": false,\r\n  \"service\": false,\r\n  \"repository\": false,\r\n  \"component\": false,\r\n  \"restTemplate\": true,\r\n  \"webClient\": false,\r\n  \"actuatorHealth\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/actuator/chaosmonkey/watchers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator",
+								"chaosmonkey",
+								"watchers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/student",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 3,\r\n        \"name\": \"Priya\",\r\n        \"age\": 22,\r\n        \"email\": \"priya@email.com\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/student",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/student/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/student/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/name/Priya",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"name",
+						"Priya"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student by email",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "RT-BL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/BL",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BL"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shipment - BL(testing)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8123/BL/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8123",
+					"path": [
+						"BL",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
