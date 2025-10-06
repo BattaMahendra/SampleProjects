@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "fc65aa04-7efb-45ba-9629-e50f680ac0e6",
+		"name": "Ratings",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20158282",
+		"_collection_link": "https://restless-desert-177614.postman.co/workspace/Micro-Services~fe4908fd-7009-4148-b93f-3faa4c1692dc/collection/20158282-fc65aa04-7efb-45ba-9629-e50f680ac0e6?action=share&creator=20158282&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "getRatings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9092/cr/7",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"cr",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserRatings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9092/cr/users/127",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"cr",
+						"users",
+						"127"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

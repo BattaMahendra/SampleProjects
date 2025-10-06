@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -83,20 +85,21 @@ public class StudentService
 	
 
 //	@Retry(name = "giveDemoObject",fallbackMethod ="serviceFallback")
-	public List<BaseLocation> getAllBLFromShipmentRT(){
+	public CompletableFuture<List<BaseLocation>> getAllBLFromShipmentRT(){
+		count=count>3?1:count;
 		System.out.println(" we are inside servce -- > getAllBLFromShipmentRT() method");
-//		System.out.println("the retry is being tried "+count++ +" times at time  of "+new Date());
-//		try{
+		System.out.println("the retry is being tried "+count++ +" times at time  of "+new Date());
+		try{
 			return shipmentRestTemplate.getShipmentBLByRestTemplate();
-//		   }catch(Exception e) {
-//			
-//			System.out.println(e.getMessage());
-//			throw new RuntimeException();
-//		}
+		   }catch(Exception e) {
+			
+			System.out.println(e.getMessage());
+			throw new RuntimeException();
+		}
 	}
 	
-	public List<BaseLocation> serviceFallback(Exception e){
-		System.out.println("we are in the service fallback");
-		 return Collections.singletonList(new BaseLocation(0, "no value", "no value"));
-	}
+//	public List<BaseLocation> serviceFallback(Exception e){
+//		System.out.println("we are in the service fallback");
+//		 return Collections.singletonList(new BaseLocation(0, "no value", "no value"));
+//	}
 }

@@ -12,6 +12,12 @@ public class AdminserverApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AdminserverApplication.class, args);
+		
 	}
 
+
+
 }
+//add a bean of rest template
+
+
