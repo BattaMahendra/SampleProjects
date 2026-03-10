@@ -50,6 +50,7 @@ The architecture of the project is as follows:
 - **Hystrix**: For fault tolerance.
 - **Maven**: For dependency management.
 - **Gradle**: For dependency management.
+- **OAuth2.0**: For Security
 
 ## 🚀 Getting Started
 
